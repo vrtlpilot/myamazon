@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Мой маленький Амазончик</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/catalog.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <ul class="menu">
+        <li class="menu_item"> <a href="/index">Главная</a></li>
+        <li class="menu_item"> <a href="/catalog">Каталог</a></li>
+        <li class="menu_item"> <a href="/contacts">Контакты</a></li>
+      </ul>
+    </header>
+    <hr>
+    <div>
+      <h1>Каталог</h1>
+      <div class="container marketing">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card">
+                <a href="/static/img/electronics.jpg" target="_blank">
+                  <img class="thumb" src="/static/img/electronics.jpg" alt="Что-то не так">
+                </a>
+                <h2>Гаджеты</h2>
+                <div class="short_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+                  deserunt mollitia animi, id est laborum et dolorum fuga</div>
+                <a class="btn btn-secondary" href="/catalog/electronics" role="button">View details »</a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <a href="/static/img/food.jpg" target="_blank">
+                  <img class="thumb" src="/static/img/food.jpg" alt="Что-то не так">
+                </a>
+                <h2>Еда</h2>
+                <div class="short_description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                  Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</div>
+                <a class="btn btn-secondary" href="catalog/food" role="button">View details »</a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <a href="/static/img/things.jpg" target="_blank">
+                  <img class="thumb" src="/static/img/things.jpg" alt="Что-то не так">
+                </a>
+                <h2>Вещи</h2>
+                <div class="short_description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                  Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</div>
+                <a class="btn btn-secondary" href="/catalog/things" role="button">View details »</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  {% for category in categories %}
+<div class="block">
+<a href="#">
+<img src="/media/{{ category.image }}" alt="{{ category.description }}">
+<div class="text">
+<h3>{{ category.category.name }}</h3>
+<h4>{{ category.name }}</h4>
+<p>{{ category.description }}</p>
+</div>
+</a>
+</div>
+{% endfor %}
+  <hr>
+  <footer>
+    &copy; Все права защищены
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+@import url("main.css");
+
+.card {
+  display: inline-block;
+  width: auto;
+  height: 200px;
+  align-content: center;
+}
+
+.card h2{
+  text-align: center;
+}
+
+div.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumb {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+}
+
+.thumb:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.short_description {
+  padding: 15px;
+  text-align: justify;
+}
+
+.description {
+  display: inline-block;
+  padding: 15px;
+  color: #707070;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 16px;
+  text-align: left;
+  width: 80%;
+}
+
+ .description ul {
+  list-style-image: url(../img/starsolid.gif);
+}
+
+.full_description {
+  color: #484343;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding: 15px;
+  text-align: justify;
+}

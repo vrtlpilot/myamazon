@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Мой маленький Амазончик</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/contacts.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <ul class="menu">
+        <li class="menu_item"> <a href="/index">Главная</a></li>
+        <li class="menu_item"> <a href="/catalog">Каталог</a></li>
+        <li class="menu_item"> <a href="/contacts">Контакты</a></li>
+      </ul>
+    </header>
+    <hr>
+    <div class="container">
+      <div class="py-5 text-center">
+        <h1>Как нас найти</h1>
+        <p class="lead">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+          animi, id est laborum et dolorum fuga
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-8 order-md-1">
+          <h2>Форма обращения</h2>
+          <form class="form_message" action="/index" method="post">
+            <label for="name">Имя</label><br>
+            <input id="name" type="text" name="Name" value=""><br>
+            <label for="email">Email</label><br>
+            <input id="email" type="text" name="Email" value=""><br>
+            <label for="subject">Тема</label><br>
+            <input id="subject" type="text" name="Subject" value=""><br>
+            <label for="message">Текстовое поле</label><br>
+            <textarea class="text_message" id="message" name="Mess"></textarea><br>
+          </form>
+        </div>
+        <div class="col-md-4 order-md-2 mb-4">
+          <h2>Адрес интернет-магазина</h2>
+          <ul style="list-style-type:none">
+            <li>Контактный номер телефона интернет-магазина</li>
+            <li>Email: <a href="mailto:jdfsgkj@mail.ru?subject=feedback">jdfsgkj@mail.ru</a></li>
+            <li>Адрес:</li>
+          </ul>
+          <div id="YMapsID" class="YMaps"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <hr>
+  <footer>
+    &copy; Все права защищены
+  </footer>
+</body>
+<script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+<script type="text/javascript">
+  // Создает обработчик события window.onLoad
+  YMaps.jQuery(function() {
+    // Создает экземпляр карты и привязывает его к созданному контейнеру
+    var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+
+    // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+    map.setCenter(new YMaps.GeoPoint(40.396, 56.1365), 10);
+  })
+</script>
+
+</html>
