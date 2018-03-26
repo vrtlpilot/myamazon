@@ -1,18 +1,21 @@
 from django.shortcuts import render
-from .models import ProductCategory, Product
+from .models import ProductCategory, Product, Promo
 
 # Create your views here.
 
 
 def main(request):
-    return render(request, 'mainapp/index.html')
+    title = 'Главная'
+    promos = Promo.objects.all()[:]
+    context = {'title': title, 'promos': promos}
+    return render(request, 'mainapp/index.html', context=context)
 
 
 def catalog(request):
-    title = 'Главная'
+    title = 'Общий каталог'
     categories = ProductCategory.objects.all()[:]
-    content = {'title': title, 'categories': categories}
-    return render(request, 'mainapp/catalog.html', content)
+    context = {'title': title, 'categories': categories}
+    return render(request, 'mainapp/catalog.html', context=context)
 
 
 def catalog_electonics(request):

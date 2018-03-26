@@ -21,10 +21,10 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', mainapp.main, name='main'),
-    url(r'^index', mainapp.main, name='main'),
-    url('^contacts/$', mainapp.contacts, name='contacts'),
-    url(r'^catalog/', include('mainapp.urls', namespace='catalog')),
+    url(r'^$', mainapp.main, name='index'),
+    url(r'^index/', mainapp.main, name='index'),
+    url(r'^contacts/$', mainapp.contacts, name='contacts'),
+    url(r'^catalog/', include('mainapp.urls'), name='catalog'),
 ]
 
 if settings.DEBUG:
