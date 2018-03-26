@@ -1,6 +1,6 @@
-from mainapp.models import ProductCategory, Product, Promo
+from catalogapp.models import ProductCategory, Product, Promo
 from json import loads
-from os import path
+from os import path, getcwd
 
 
 def import_categories(instance):
@@ -14,10 +14,13 @@ def import_categories(instance):
                              desciption=instance.description,
                              image=instance.image) as category:
             category.save()
+            return True
+    else:
+        return False
 
 
 def get_category(name):
-    return ProductCategory.objects.filter(name=name)
+    return ProductCategory.objects.filter(name=name).first()
 
 
 def import_products(instance):
@@ -37,6 +40,9 @@ def import_products(instance):
                      quantity=instance.quantity
                      ) as product:
             product.save()
+            return True
+    else:
+        return False
 
 
 def import_promos(instance):
@@ -50,6 +56,9 @@ def import_promos(instance):
                    desciption=instance.description
                    ) as promo:
             promo.save()
+            return True
+    else:
+        return False
 
 
 MODEL_CLASSES = {
@@ -71,21 +80,24 @@ def import_json(json_data):
     # TODO read json file
     items = []
     importer = None
+    count = 0
     try:
         if json_data['modelClass'] is not None:
             importer = get_importer(json_data['modelClass'])
             items = list(json_data['items'])
         for item in items:
             item_obj = loads(item, encoding="utf-8")
-            importer(item_obj)
+            if importer(item_obj):
+                count += 1
+        return count
+
     except ValueError:
         return None
 
 
 if __name__ == "__main__":
     file_name = "import/promo.json"
-    if path.isfile(file_name):
-        with open(file_name) as json_file:
-            json_data = json_file.read()
-            import_json(json_data=json_data)
-            json_file.close()
+    if path.isfile(path.join(getcwd(), file_name)):
+        with open(path.join(getcwd(), file_name)) as json_file:
+            result = import_json(json_data=json_file.read())
+            print("Импортировано объектов - {}".format(result))

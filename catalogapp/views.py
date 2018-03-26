@@ -8,27 +8,27 @@ def main(request):
     title = 'Главная'
     promos = Promo.objects.all()[:]
     context = {'title': title, 'promos': promos}
-    return render(request, 'mainapp/index.html', context=context)
+    return render(request, 'catalogapp/index.html', context=context)
 
 
 def catalog(request):
     title = 'Общий каталог'
     categories = ProductCategory.objects.all()[:]
     context = {'title': title, 'categories': categories}
-    return render(request, 'mainapp/catalog.html', context=context)
+    return render(request, 'catalogapp/catalog.html', context=context)
 
 
-def catalog_electonics(request):
-    return render(request, 'mainapp/catalog/electronics.html')
+def electonics(request):
+    return render(request, 'catalogapp/catalog/electronics.html')
 
 
-def catalog_food(request):
-    return render(request, 'mainapp/catalog/food.html')
+def food(request):
+    return render(request, 'catalogapp/catalog/food.html')
 
 
-def catalog_things(request):
-    return render(request, 'mainapp/catalog/things.html')
+def things(request):
+    return render(request, 'catalogapp/catalog/things.html')
 
 
 def contacts(request):
-    return render(request, 'mainapp/contacts.html')
+    return render(request, 'catalogapp/contacts.html')

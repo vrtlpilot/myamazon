@@ -23,20 +23,23 @@
     {% block menu %}
     <header>
       <ul class="menu">
-        <li class="menu_item"> <a href="{% url 'index' %}">Главная</a></li>
-        <li class="menu_item"> <a href="{% url 'catalog' %}">Каталог</a></li>
+        <li class="menu_item"> <a href="{% url 'main' %}">Главная</a></li>
+        <li class="menu_item"> <a href="{% url 'catalogapp:catalog' %}">Каталог</a></li>
         <li class="menu_item"> <a href="{% url 'contacts' %}">Контакты</a></li>
+        {% if user.is_authenticated %}
+          <li class="menu_item"><a href="{% url 'authapp:logout' %}">Войти</a></li>
+        {% else %}
+          <li class="menu_item"><a href="{% url 'authapp:login' %}">Выйти</a></li>
+        {% endif %}
       </ul>
     </header>
     {% endblock %}
     <hr>
     <h1>{{ title }}</h1>
-    <div class="album py-5 bg-light">
     <div class="container">
     {% block content %}
     {% endblock %}
     </div>
-
   </main>
   {% block footer %}
   <hr>

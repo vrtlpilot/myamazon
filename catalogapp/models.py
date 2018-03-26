@@ -3,6 +3,11 @@ from django.db import models
 # Create your models here.
 
 
+def load_from_json():
+    #TODO Load from JSON file
+    pass
+
+
 class Promo(models.Model):
     name = models.CharField(verbose_name="Название", max_length=100, unique=True)
     description = models.TextField(verbose_name="Описание", blank=True)
