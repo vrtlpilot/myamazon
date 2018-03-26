@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', mainapp.main, name='index'),
     url(r'^index/', mainapp.main, name='index'),
-    url(r'^contacts/$', mainapp.contacts, name='contacts'),
+    url(r'^contacts/', mainapp.contacts, name='contacts'),
     url(r'^catalog/', include('mainapp.urls'), name='catalog'),
 ]
 

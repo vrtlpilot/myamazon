@@ -1,29 +1,7 @@
+{% extends 'mainapp/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <title>Мой маленький Амазончик</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/catalog.css' %}">
-</head>
-
-<body>
-  <main>
-    <header>
-      <ul class="menu">
-        <li class="menu_item"> <a href="/index">Главная</a></li>
-        <li class="menu_item"> <a href="/catalog">Каталог</a></li>
-        <li class="menu_item"> <a href="/contacts">Контакты</a></li>
-      </ul>
-    </header>
-    <hr>
-    <div>
-      <h1>Каталог</h1>
-      <div class="container marketing">
-        <div class="container">
+{% block content %}
           <div class="row">
               {% for category in categories %}
                 <div class="col-lg-4">
@@ -38,26 +16,4 @@
                 </div>
               {% endfor %}
           </div>
-        </div>
-      </div>
-    </div>
-  </main>
-    {% for category in categories %}
-    <div class="col-lg-4">
-        <a href="#">
-        <img src="/media/{{ category.image }}" alt="{{ category.description }}">
-            <div class="text">
-                <h3>{{ category.category.name }}</h3>
-                <h4>{{ category.name }}</h4>
-                <p>{{ category.description }}</p>
-            </div>
-        </a>
-    </div>
-    {% endfor %}
-  <hr>
-  <footer>
-    &copy; Все права защищены
-  </footer>
-</body>
-
-</html>
+{% endblock %}

@@ -1,0 +1,20 @@
+{
+  "modelClass": "ProductCategory",
+  "items": [
+    {
+      "name": "food",
+      "description": "Shot description for foods",
+      "image": "img/foods.jpg"
+    },
+    {
+      "name": "thing",
+      "description": "Shot description for things",
+      "image": "img/things.jpg"
+    },
+    {
+      "name": "gadget",
+      "description": "Shot description for electronics",
+      "image": "img/electronics.jpg"
+    }
+  ]
+}

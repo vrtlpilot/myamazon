@@ -1,0 +1,86 @@
+{
+  "modelClass": "Products",
+  "items":[
+    {
+      "name": "food1",
+      "category": "food",
+      "image": "img/food1.jpg",
+      "short_desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+      "description": "В западной традиции рыбой выступает фрагмент латинского текста из философского трактата Цицерона «О пределах добра и зла», написанного в 45 году до нашей эры. Впервые этот текст был применен для набора шрифтовых образцов неизвестным печатником еще в XVI веке.",
+      "price": 192.45,
+      "quantity": 23
+    },
+    {
+      "name": "food2",
+      "category": "food",
+      "image": "img/food2.jpg",
+      "short_desc": "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+      "description": "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
+      "price": 2.50,
+      "quantity": 2
+    },
+    {
+      "name": "food3",
+      "category": "food",
+      "image": "img/food3.jpg",
+      "short_desc": "kdlkhfdkfh dfkha dsfkad fkads fakdhs fadkhf adkf dklf adlf adlf ad kfahklds f",
+      "description": "Сегодня этот текст используют практически все дизайнеры, набирающие рыбу латиницей. Абзац считается каноническим во всех справочниках по типографике и предлагается к использованию в статьях, посвященных изготовлению макета верстки при отсутствии финальных текстов.",
+      "price": 19.00,
+      "quantity": 10
+    },
+    {
+      "name": "food4",
+      "category": "food",
+      "image": "img/food4.jpg",
+      "short_desc": "kdlkhfdkfh dfkha dsfkad fkads fakdhs fadkhf adkf dklf adlf adlf ad kfahklds f",
+      "description": "В западной традиции рыбой выступает фрагмент латинского текста из философского трактата Цицерона «О пределах добра и зла», написанного в 45 году до нашей эры. Впервые этот текст был применен для набора шрифтовых образцов неизвестным печатником еще в XVI веке.",
+      "price": 12.30,
+      "quantity": 163416
+    },
+    {
+      "name": "food5",
+      "category": "food",
+      "image": "img/food5.jpg",
+      "short_desc": "kdlkhfdkfh dfkha dsfkad fkads fakdhs fadkhf adkf dklf adlf adlf ad kfahklds f",
+      "description": "В западной традиции рыбой выступает фрагмент латинского текста из философского трактата Цицерона «О пределах добра и зла», написанного в 45 году до нашей эры. Впервые этот текст был применен для набора шрифтовых образцов неизвестным печатником еще в XVI веке.",
+      "price": 15,
+      "quantity": 0
+    },
+    {
+      "name": "things1",
+      "category": "thing",
+      "image": "img/thing1.jpg",
+      "short_desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+      "description": "В западной традиции рыбой выступает фрагмент латинского текста из философского трактата Цицерона «О пределах добра и зла», написанного в 45 году до нашей эры. Впервые этот текст был применен для набора шрифтовых образцов неизвестным печатником еще в XVI веке.",
+      "price": 192.45,
+      "quantity": 23
+    },
+    {
+      "name": "electronics1",
+      "category": "gadget",
+      "image": "img/gadget1.jpg",
+      "short_desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+      "description": "В западной традиции рыбой выступает фрагмент латинского текста из философского трактата Цицерона «О пределах добра и зла», написанного в 45 году до нашей эры. Впервые этот текст был применен для набора шрифтовых образцов неизвестным печатником еще в XVI веке.",
+      "price": 192.45,
+      "quantity": 23
+    },
+    {
+      "name": "electronics2",
+      "category": "gadget",
+      "image": "img/gadget2.jpg",
+      "short_desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+      "description": "В западной традиции рыбой выступает фрагмент латинского текста из философского трактата Цицерона «О пределах добра и зла», написанного в 45 году до нашей эры. Впервые этот текст был применен для набора шрифтовых образцов неизвестным печатником еще в XVI веке.",
+      "price": 192.45,
+      "quantity": 23
+    },
+    {
+      "name": "electronics3",
+      "category": "gadget",
+      "image": "img/gadget3.jpg",
+      "short_desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+      "description": "В западной традиции рыбой выступает фрагмент латинского текста из философского трактата Цицерона «О пределах добра и зла», написанного в 45 году до нашей эры. Впервые этот текст был применен для набора шрифтовых образцов неизвестным печатником еще в XVI веке.",
+      "price": 192.45,
+      "quantity": 23
+    }
+  ]
+}

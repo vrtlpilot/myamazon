@@ -1,25 +1,12 @@
-<!DOCTYPE html>
+{% extends 'mainapp/base.html' %}
 {% load static %}
-<html>
 
-<head>
-  <meta charset="utf-8">
-  <title>Мой маленький Амазончик</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
-</head>
+{% block css %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+{% endblock %}
 
-<body>
-  <main>
-    <header>
-      <ul class="menu">
-        <li class="menu_item"> <a href="/index">Главная</a></li>
-        <li class="menu_item"> <a href="/catalog">Каталог</a></li>
-        <li class="menu_item"> <a href="/contacts">Контакты</a></li>
-      </ul>
-    </header>
-    <hr>
-    <div class="container">
+{% block content %}
       <div class="py-5 text-center">
         <h1>Как нас найти</h1>
         <p class="lead">
@@ -51,23 +38,18 @@
           <div id="YMapsID" class="YMaps"></div>
         </div>
       </div>
-    </div>
-  </main>
-  <hr>
-  <footer>
-    &copy; Все права защищены
-  </footer>
-</body>
-<script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
-<script type="text/javascript">
-  // Создает обработчик события window.onLoad
-  YMaps.jQuery(function() {
-    // Создает экземпляр карты и привязывает его к созданному контейнеру
-    var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+{% endblock %}
 
-    // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
-    map.setCenter(new YMaps.GeoPoint(40.396, 56.1365), 10);
-  })
-</script>
+{% block js %}
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+    <script type="text/javascript">
+      // Создает обработчик события window.onLoad
+      YMaps.jQuery(function() {
+        // Создает экземпляр карты и привязывает его к созданному контейнеру
+        var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
 
-</html>
+        // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+        map.setCenter(new YMaps.GeoPoint(40.396, 56.1365), 10);
+      })
+    </script>
+{% endblock %}
